@@ -5,12 +5,6 @@
         "long_url": "https://this-is-a-stub.com/1324928349872",
         "short_url": "http://localhost:3001/useshorturl/1",
         "title": "Awesome stub"
-    },
-    {
-        "id": 2,
-        "long_url": "https://this-is-another-stub.com/81239487123",
-        "short_url": "http://localhost:3001/useshorturl/2",
-        "title": "You got this!"
     }
   ]
 }
