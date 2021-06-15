@@ -17,6 +17,7 @@ export class App extends Component {
     .then(data => {
       this.setState({ urls: data.urls })
     })
+    .catch(error => this.setState({error: 'Something went wrong. Refresh, and try again.'}))
   }
 
   render() {
@@ -26,7 +27,6 @@ export class App extends Component {
           <h1>URL Shortener</h1>
           <UrlForm />
         </header>
-
         <UrlContainer urls={this.state.urls}/>
       </main>
     );
