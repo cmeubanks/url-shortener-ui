@@ -20,8 +20,14 @@ export class App extends Component {
     .catch(error => this.setState({error: 'Something went wrong. Refresh, and try again.'}))
   }
 
-  addNewURL = () => {
-
+  addNewURL = (newURL) => {
+    postUrls(newURL)
+    .then(data => {
+      this.setState({
+        urls: [...this.state.urls, data]
+      })
+    })
+    .catch(error => this.setState({error: 'URL submission unsuccessful.'}))
   }
 
   render() {
