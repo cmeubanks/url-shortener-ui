@@ -6,7 +6,8 @@ class UrlForm extends Component {
     this.props = props;
     this.state = {
       title: '',
-      urlToShorten: ''
+      urlToShorten: '',
+      error: ''
     };
   }
 
@@ -16,12 +17,16 @@ class UrlForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if(this.state.title && this.state.urlToShorten) {
     const newURL = {
       long_url: this.state.urlToShorten,
       title: this.state.title
     }
     this.props.addNewURL(newURL)
     this.clearInputs();
+  } else {
+    this.setState({error: 'Please enter information in all fields'})
+  }
   }
 
   clearInputs = () => {

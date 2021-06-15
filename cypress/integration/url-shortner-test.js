@@ -23,7 +23,7 @@ describe('Main Page Tests', () => {
         .get('.url').eq(0).get('a')
           .contains('http://localhost:3001/useshorturl/1')
         .get('.url').eq(0).get('p')
-          .contains('https://stubbing-all-over-the-world.com/78910')
+          .contains('https://this-is-a-stub.com/1324928349872')
     })
 
     it('should display a form on page load with default inputs', () => {
