@@ -39,7 +39,7 @@ describe('Main Page Tests', () => {
     })
   })
 
-  describe('Form Functionality', () => {
+  describe('Form Inputs', () => {
 
     it('should reflect user inputs in form fields when user interacts with form', () => {
       cy.get('form')
@@ -49,6 +49,21 @@ describe('Main Page Tests', () => {
         .get('input[name=urlToShorten]').type('https://another-stub.com/1234')
         .get('input[name=urlToShorten]')
             .should('have.value', 'https://another-stub.com/1234')
+    })
+  })
+
+  describe('Form Submission - New Urls', () => {
+
+    beforeEach(() => {
+      cy.fixture('url-data.json')
+        .then(urls => {
+          cy.intercept('http://localhost:3001/api/v1/urls', {
+            statusCode: 200,
+            body: urls
+          })
+        })
+
+      cy.fixture('')
     })
   })
 })
