@@ -25,5 +25,18 @@ describe('Main Page Tests', () => {
         .get('.url').eq(0).get('p')
           .contains('https://this-is-a-stub.com/1324928349872')
     })
+
+    it('should display a form on page load with default inputs', () => {
+      cy.get('form').should('exist')
+        .get('input')
+          .should('have.length', 2)
+        .get('input[name=title]')
+          .should('have.value', '')
+        .get('input[name=urlToShorten]')
+          .should('have.value', '')
+        .get('button')
+          .contains('Shorten Please!')
+    })
+
   })
 })
