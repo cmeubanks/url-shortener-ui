@@ -37,6 +37,18 @@ describe('Main Page Tests', () => {
         .get('button')
           .contains('Shorten Please!')
     })
+  })
 
+  describe('Form Functionality', () => {
+
+    it('should reflect user inputs in form fields when user interacts with form', () => {
+      cy.get('form')
+        .get('input[name=title]').type('Keep Going')
+        .get('input[name=title]')
+          .should('have.value', 'Keep Going')
+        .get('input[name=urlToShorten]').type('https://another-stub.com/1234')
+        .get('input[name=urlToShorten]')
+            .should('have.value', 'https://another-stub.com/1234')
+    })
   })
 })
