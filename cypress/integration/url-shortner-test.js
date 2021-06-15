@@ -9,7 +9,7 @@ describe('Main Page Tests', () => {
           body: urls
         })
       })
-      cy.visit('http://localhost:3001/')
+      cy.visit('http://localhost:3000/')
   })
 
   describe('Page Load', () => {

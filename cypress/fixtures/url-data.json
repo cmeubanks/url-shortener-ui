@@ -1,10 +1,10 @@
 {
   "urls": [
-    {
+      {
         "id": 1,
         "long_url": "https://this-is-a-stub.com/1324928349872",
         "short_url": "http://localhost:3001/useshorturl/1",
         "title": "Awesome stub"
-    }
+      }
   ]
 }

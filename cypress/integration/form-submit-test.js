@@ -1,7 +1,7 @@
 describe('Form Submission - New Urls', () => {
 
-before(() => {
-  cy.fixture('new-url-data.json')
+beforeEach(() => {
+  cy.fixture('url-data.json')
   .then((urls) => {
     cy.intercept('GET', 'http://localhost:3001/api/v1/urls', {
       statusCode: 200,
@@ -9,7 +9,7 @@ before(() => {
     })
   })
 
-  cy.fixture('url-data.json')
+  cy.fixture('new-url-data.json')
     .then((url) => {
       cy.intercept('POST', 'http://localhost:3001/api/v1/urls', {
        statusCode: 200,
