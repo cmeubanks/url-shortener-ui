@@ -1,4 +1,6 @@
 {
+  "id": 2,
   "long_url": "https://stubbing-all-over-the-world.com/78910",
+  "short_url": "http://localhost:3001/useshorturl/2",
   "title": "Stub like a boss"
 }
